@@ -28,7 +28,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div>
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow">
+            <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
               Join the waitlist
             </button>
           </div>

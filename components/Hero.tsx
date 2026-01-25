@@ -12,7 +12,7 @@ const HeroSection = () => {
           <p className="text-gray-600 text-base sm:text-lg mb-8">
             We're building the home of African footwear. Join early and be part of the launch.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-8 py-3 rounded-full hover:shadow-lg transition-shadow">
+          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-8 py-3 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
             Join the waitlist
           </button>
         </div>

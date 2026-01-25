@@ -1,4 +1,7 @@
 import React from 'react';
+import WaitlistForm from './WaitlistForm';
+//import { joinWaitlist } from '@/lib/api';
+
 
 const WhyJoinSection = () => {
   return (
@@ -84,81 +87,7 @@ const WhyJoinSection = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-gray-200 rounded-3xl p-8 lg:p-10">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Join for Early Access
-            </h3>
-
-            <form className="space-y-6">
-              {/* Full Name */}
-              <div>
-                <label htmlFor="fullname" className="block text-gray-800 font-medium mb-2">
-                  Full name<span className="text-red-500">*</span>
-                  <span className="text-gray-500 text-sm font-normal"> (Required)</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullname"
-                  placeholder="Full name*"
-                  className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required
-                />
-              </div>
-
-              {/* Email Address */}
-              <div>
-                <label htmlFor="email" className="block text-gray-800 font-medium mb-2">
-                  Email address<span className="text-red-500">*</span>
-                  <span className="text-gray-500 text-sm font-normal"> (Required)</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Email address*"
-                  className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required
-                />
-              </div>
-
-              {/* Location */}
-              <div>
-                <label htmlFor="location" className="block text-gray-800 font-medium mb-2">
-                  Location<span className="text-red-500">*</span>
-                  <span className="text-gray-500 text-sm font-normal"> (Required)</span>
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  placeholder="Location*"
-                  className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required
-                />
-              </div>
-
-              {/* User Type */}
-              <div>
-                <label htmlFor="usertype" className="block text-gray-800 font-medium mb-2">
-                  User type<span className="text-red-500">*</span>
-                  <span className="text-gray-500 text-sm font-normal"> (Required)</span>
-                </label>
-                <input
-                  type="text"
-                  id="usertype"
-                  placeholder="User type*"
-                  className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-semibold px-8 py-3.5 rounded-full hover:shadow-lg transition-shadow mt-8"
-              >
-                Get Early Access at Launch
-              </button>
-            </form>
-          </div>
+          <WaitlistForm />
         </div>
       </div>
     </section>
