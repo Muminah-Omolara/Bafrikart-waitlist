@@ -15,9 +15,20 @@ export async function joinWaitlist(payload: {
     body: JSON.stringify(payload),
   });
 
+  //Read the json response first (It contains the success OR error message)
+  const data = await res.json();
+
+  // If the request failed throw the REAL data
   if (!res.ok) {
-    throw new Error("Failed to join waitlist");
+    const error: any = new Error(data.message || "Failed to join waitlist");
+    
+
+    error.response = {
+      status: res.status,
+      data: data,
+    };
+    throw error;
   }
 
-  return res.json();
+  return data;
 }
