@@ -1,72 +1,95 @@
-import React from 'react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import ShoeShowcase from "./ShoeShowcase";
 
 const HeroSection = () => {
+  // Typewriter text
+  const text = "Coming Soon...";
+
+  // Animation settings for the letters
+  const sentenceVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <section className="pt-24 sm:pt-28 md:pt-32 pb-16 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Text */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-4">
-            African Shoes. One Marketplace. Coming Soon.
-          </h1>
-          <p className="text-gray-600 text-base sm:text-lg mb-8">
-            We're building the home of African footwear. Join early and be part of the launch.
-          </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-8 py-3 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
-            Join the waitlist
-          </button>
-        </div>
+    <section className="relative bg-white pt-24 lg:pt-24 md:pt-20 flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+      {/* 1. Main Headline*/}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-5xl md:text-7xl font-serif font-bold text-gray-900 tracking-tight leading-tight"
+      >
+        African Shoes. One Marketplace.
+      </motion.h1>
 
-        {/* Image Row */}
-        <div className="mt-12 sm:mt-16 flex gap-4 sm:gap-6 overflow-x-auto lg:overflow-visible pb-4 items-center">
-          
-          <div className="relative flex-shrink-0 w-60 sm:w-72 h-64 sm:h-72 rounded-2xl overflow-hidden bg-gray-200 transform -rotate-3 hover:rotate-0 transition-transform">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <img
-                src="/images/Rectangle 8.svg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* 2. Typewriter Text*/}
+      <motion.h2
+        variants={sentenceVariants}
+        initial="hidden"
+        animate="visible"
+        className="text-4xl md:text-6xl font-serif font-bold text-yellow-500 mt-4 min-h[60px]"
+      >
+        {text.split("").map((char, index) => (
+          <motion.span key={index} variants={letterVariants}>
+            {char}
+          </motion.span>
+        ))}
+        {/* Cursor Effect */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          className="inline-block w-1 h-10 md:h-14 bg-yellow-500 ml-1 align-middle"
+        />
+      </motion.h2>
 
-          <div className="relative flex-shrink-0 w-52 sm:w-56 h-64 sm:h-72 rounded-2xl overflow-hidden bg-gray-200 transform rotate-2 hover:rotate-0 transition-transform">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <img
-                src="/images/Rectangle 7.svg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* 3. Sub-headline */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-xl md:text-2xl text-gray-600 mt-4 max-w-2xl font-light leading-relaxed"
+      >
+        We're building the home of African footwear.{" "}
+        <br className="hidden md:block" />
+        Join early and be part of the launch.
+      </motion.p>
 
-          <div className="relative flex-shrink-0 w-52 sm:w-56 h-64 sm:h-72 rounded-2xl overflow-hidden bg-gray-200 transform -rotate-2 hover:rotate-0 transition-transform">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <img
-                src="/images/Rectangle 4.svg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* 4. CTA Button  */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.0 }}
+        className="mt-10"
+      >
+        <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
+          Join the waitlist
+        </button>
+      </motion.div>
 
-          <div className="relative flex-shrink-0 w-52 sm:w-56 h-64 sm:h-72 rounded-2xl overflow-hidden bg-gray-200 transform rotate-3 hover:rotate-0 transition-transform">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <img
-                src="/images/Rectangle 5.svg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* CTA Button */}
+      <div className="hidden md:block"></div>
 
-          <div className="relative flex-shrink-0 w-52 sm:w-56 h-64 sm:h-72 rounded-2xl overflow-hidden bg-gray-200 transform -rotate-2 hover:rotate-0 transition-transform">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              <img
-                src="/images/Rectangle 6.svg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
+      {/* Image Row */}
+      <ShoeShowcase />
     </section>
   );
 };
