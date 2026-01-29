@@ -14,13 +14,19 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/*  Logo */}
           <div className="flex items-center w-36 h-6 z-50 relative">
-            <img src="/images/logo.png" alt="Logo" className="object-contain" />
+            <a href="/">
+              <img
+                src="/images/logo.png"
+                alt="Logo"
+                className="object-contain cursor-pointer"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#home"
+              href="/"
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
               Home
@@ -47,9 +53,12 @@ const Navbar = () => {
 
           {/* 3. Desktop CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
+            <a
+              href="#waitlist"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer"
+            >
               Join the waitlist
-            </button>
+            </a>
           </div>
 
           {/* 4. Mobile Hamburger Button */}
@@ -98,9 +107,12 @@ const Navbar = () => {
           </a>
 
           {/* Mobile CTA Button */}
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-semibold px-8 py-3 rounded-full shadow-md">
+          <a
+            href="#waitlist"
+            className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-semibold px-8 py-3 rounded-full shadow-md"
+          >
             Join the waitlist
-          </button>
+          </a>
         </div>
       )}
     </nav>

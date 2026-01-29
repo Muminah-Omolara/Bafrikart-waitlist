@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import ShoeShowcase from "./ShoeShowcase";
 
 const HeroSection = () => {
   // Typewriter text
@@ -66,7 +65,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="text-xl md:text-2xl text-gray-600 mt-4 max-w-2xl font-light leading-relaxed"
+        className="text-xl md:text-2xl text-gray-900 mt-4 max-w-2xl font-semi-bold leading-relaxed"
       >
         We're building the home of African footwear.{" "}
         <br className="hidden md:block" />
@@ -80,16 +79,16 @@ const HeroSection = () => {
         transition={{ delay: 1.0 }}
         className="mt-10"
       >
-        <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer">
+        <a
+          href="#waitlist"
+          className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-medium px-6 py-2.5 rounded-full hover:shadow-lg transition-shadow cursor-pointer"
+        >
           Join the waitlist
-        </button>
+        </a>
       </motion.div>
 
       {/* CTA Button */}
       <div className="hidden md:block"></div>
-
-      {/* Image Row */}
-      <ShoeShowcase />
     </section>
   );
 };

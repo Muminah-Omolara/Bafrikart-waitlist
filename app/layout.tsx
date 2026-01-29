@@ -39,7 +39,11 @@ export default function RootLayout({
         >
           <NextTopLoader color="#000000" showSpinner={false} easing="ease" />
           <Header />
-          <MaxWidthWrapper>{children}</MaxWidthWrapper>
+          <MaxWidthWrapper>
+            <div className="relative w-full min-h-screen overflow-x-hidden">
+              {children}
+            </div>
+          </MaxWidthWrapper>
 
           <Toaster position="top-right" expand={false} />
           <GoogleAnalytics gaId="" />
