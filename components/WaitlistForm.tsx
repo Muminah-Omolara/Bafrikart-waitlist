@@ -80,8 +80,8 @@ const WaitlistForm = () => {
         </h3>
 
         <p className="text-gray-600 text-lg mb-8">
-          Thanks for joining the Bafrikart tribe. We've sent a special welcome
-          email to your inbox.
+          Thanks for joining Bafrikart. We've sent a special welcome email to
+          your inbox.
         </p>
 
         <button
