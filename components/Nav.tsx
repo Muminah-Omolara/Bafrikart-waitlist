@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { RiMenu3Fill, RiCloseFill } from "react-icons/ri"; // Import Close Icon
+import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* 3. Desktop CTA Button */}
+          {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <a
               href="#waitlist"
@@ -61,7 +61,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* 4. Mobile Hamburger Button */}
+          {/* Mobile Hamburger Button */}
           <div className="md:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -79,7 +79,7 @@ const Navbar = () => {
           {/* Mobile Links */}
           <a
             onClick={handleLinkClick}
-            href="#home"
+            href="/"
             className="text-xl text-gray-800 font-medium hover:text-yellow-600"
           >
             Home
@@ -108,6 +108,7 @@ const Navbar = () => {
 
           {/* Mobile CTA Button */}
           <a
+            onClick={handleLinkClick}
             href="#waitlist"
             className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-800 font-semibold px-8 py-3 rounded-full shadow-md"
           >

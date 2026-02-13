@@ -25,7 +25,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-white pt-24 lg:pt-24 md:pt-20 flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-      {/* 1. Main Headline*/}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,7 +34,7 @@ const HeroSection = () => {
         African Shoes. One Marketplace.
       </motion.h1>
 
-      {/* 2. Typewriter Text*/}
+      {/*Typewriter Text*/}
       <motion.h2
         variants={sentenceVariants}
         initial="hidden"
@@ -60,7 +59,7 @@ const HeroSection = () => {
         />
       </motion.h2>
 
-      {/* 3. Sub-headline */}
+      {/* paragraph text */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -72,7 +71,7 @@ const HeroSection = () => {
         Join early and be part of the launch.
       </motion.p>
 
-      {/* 4. CTA Button  */}
+      {/* cta button  */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -86,9 +85,6 @@ const HeroSection = () => {
           Join the waitlist
         </a>
       </motion.div>
-
-      {/* CTA Button */}
-      <div className="hidden md:block"></div>
     </section>
   );
 };

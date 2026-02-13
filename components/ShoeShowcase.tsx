@@ -45,7 +45,7 @@ export default function ShoeShowcase() {
                 ${shoe.className}
               `}
             >
-              {/* IMAGE WRAPPER: Exact copy of your Hero structure */}
+              {/* images wrapper*/}
               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                 <img
                   src={shoe.img}

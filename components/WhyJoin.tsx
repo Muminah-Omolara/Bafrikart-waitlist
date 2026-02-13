@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import WaitlistForm from "./WaitlistForm";
 
 const WhyJoinSection = () => {
-  const leftCol = {
+  const leftCol: Variants = {
     hidden: { opacity: 0, x: -60 },
     visible: {
       opacity: 1,
@@ -13,7 +13,7 @@ const WhyJoinSection = () => {
     },
   };
 
-  const rightCol = {
+  const rightCol: Variants = {
     hidden: { opacity: 0, x: 60 },
     visible: {
       opacity: 1,
@@ -22,14 +22,14 @@ const WhyJoinSection = () => {
     },
   };
 
-  const list = {
+  const list: Variants = {
     hidden: {},
     visible: {
       transition: { staggerChildren: 0.12, delayChildren: 0.15 },
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,

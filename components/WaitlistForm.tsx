@@ -88,7 +88,7 @@ const WaitlistForm = () => {
           onClick={() => window.location.reload()}
           className="text-yellow-600 font-semibold hover:text-yellow-700 underline"
         >
-          Back to home
+          Go back
         </button>
       </div>
     );
