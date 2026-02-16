@@ -42,9 +42,10 @@ export default function WhoAreYou() {
     mqHoverFine.addEventListener?.("change", update);
     mqCoarse.addEventListener?.("change", update);
 
-    const handlePointer = (e) => {
+    const handlePointer = (e: any) => {
       if (e.pointerType === "touch") setIsTouch(true);
-      if (e.pointerType === "mouse" || e.pointerType === "pen") setIsTouch(false);
+      if (e.pointerType === "mouse" || e.pointerType === "pen")
+        setIsTouch(false);
     };
     window.addEventListener("pointerdown", handlePointer, { passive: true });
 
@@ -55,10 +56,10 @@ export default function WhoAreYou() {
     };
   }, []);
 
-  const handleCardClick = (id) => {
+  const handleCardClick = (id: any) => {
     //Tap/click flips only on non-hover devices (mobile/tablet)
     if (!canHover || isTouch) {
-      setFlippedId((prev) => (prev === id ? null : id));
+      setFlippedId((prev: any) => (prev === id ? null : id));
     }
   };
 
